@@ -114,14 +114,6 @@
                 <td class="last">The client which initiated the instance.</td>
                 <td></td>
             </tr>
-                    <tr>
-                <td class="type" id="property_inhibitors">
-                                                                                array
-                </td>
-                <td><a name="property_inhibitors" href="#property_inhibitors">$inhibitors</a></td>
-                <td class="last">Functions that can block commands from running.</td>
-                <td></td>
-            </tr>
             </table>
 
     
@@ -166,7 +158,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_addInhibitor">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandDispatcher.php#L119">line 119</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandDispatcher.php#L133">line 133</a></div>
         <code>                    $this
     <strong>addInhibitor</strong>(callable $inhibitor)
         </code>
@@ -215,7 +207,7 @@ The inhibitor can return a Promise (for async computation), but has to resolve w
             </div>
                     <div class="method-item">
                     <h3 id="method_handleMessage">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandDispatcher.php#L147">line 147</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandDispatcher.php#L161">line 161</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>handleMessage</strong>(<abbr title="CharlotteDunois\Yasmin\Models\Message">Message</abbr> $message, <abbr title="CharlotteDunois\Yasmin\Models\Message">Message</abbr> $oldMessage = null)
         </code>
@@ -262,7 +254,7 @@ The inhibitor can return a Promise (for async computation), but has to resolve w
             </div>
                     <div class="method-item">
                     <h3 id="method_removeInhibitor">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandDispatcher.php#L132">line 132</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandDispatcher.php#L146">line 146</a></div>
         <code>                    $this
     <strong>removeInhibitor</strong>(callable $inhibitor)
         </code>
