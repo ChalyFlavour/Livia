@@ -103,6 +103,27 @@
             <p>Loads and stores settings associated with guilds.</p>            <p>Classes extending this class must assign the client received in the <code>init</code> method to the <code>client</code> property.</p>                    </div>
     
     
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>STATE_IDLE</td>
+                <td class="last">
+                    <p><em>The Provider state, idling waiting to have a connection.</em></p>
+                    <p></p>
+                                            <pre><code class="language-php">const STATE_IDLE = 0;</code></pre>
+                                    </td>
+            </tr>
+                    <tr>
+                <td>STATE_READY</td>
+                <td class="last">
+                    <p><em>The Provider state, ready to get work done.</em></p>
+                    <p></p>
+                                            <pre><code class="language-php">const STATE_READY = 1;</code></pre>
+                                    </td>
+            </tr>
+            </table>
+
     
             <h2>Properties</h2>
 
@@ -243,6 +264,16 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getState">getState</a>()
+        
+                                            <p>Returns the provider state.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
                 </div>
                 <div class="col-md-8 type">
@@ -319,7 +350,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_attachListeners">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Providers/SettingProvider.php#L113">line 113</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Providers/SettingProvider.php#L142">line 142</a></div>
         <code>                    void
     <strong>attachListeners</strong>()
         </code>
@@ -360,7 +391,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_callbackCommandPrefixChange">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Providers/SettingProvider.php#L216">line 216</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Providers/SettingProvider.php#L245">line 245</a></div>
         <code>                    void
     <strong>callbackCommandPrefixChange</strong>(<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr>|null $guild, string|null $prefix)
         </code>
@@ -407,7 +438,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_callbackCommandRegister">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Providers/SettingProvider.php#L268">line 268</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Providers/SettingProvider.php#L297">line 297</a></div>
         <code>                    void
     <strong>callbackCommandRegister</strong>(<a href="../../../CharlotteDunois/Livia/Commands/Command.html"><abbr title="CharlotteDunois\Livia\Commands\Command">Command</abbr></a> $command)
         </code>
@@ -449,7 +480,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_callbackCommandStatusChange">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Providers/SettingProvider.php#L231">line 231</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Providers/SettingProvider.php#L260">line 260</a></div>
         <code>                    void
     <strong>callbackCommandStatusChange</strong>(<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr>|null $guild, <a href="../../../CharlotteDunois/Livia/Commands/Command.html"><abbr title="CharlotteDunois\Livia\Commands\Command">Command</abbr></a> $command, bool $enabled)
         </code>
@@ -501,7 +532,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_callbackGroupRegister">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Providers/SettingProvider.php#L283">line 283</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Providers/SettingProvider.php#L312">line 312</a></div>
         <code>                    void
     <strong>callbackGroupRegister</strong>(<a href="../../../CharlotteDunois/Livia/Commands/CommandGroup.html"><abbr title="CharlotteDunois\Livia\Commands\CommandGroup">CommandGroup</abbr></a> $group)
         </code>
@@ -543,7 +574,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_callbackGroupStatusChange">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Providers/SettingProvider.php#L246">line 246</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Providers/SettingProvider.php#L275">line 275</a></div>
         <code>                    void
     <strong>callbackGroupStatusChange</strong>(<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr>|null $guild, <a href="../../../CharlotteDunois/Livia/Commands/CommandGroup.html"><abbr title="CharlotteDunois\Livia\Commands\CommandGroup">CommandGroup</abbr></a> $group, bool $enabled)
         </code>
@@ -595,7 +626,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_callbackGuildCreate">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Providers/SettingProvider.php#L259">line 259</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Providers/SettingProvider.php#L288">line 288</a></div>
         <code>                    void
     <strong>callbackGuildCreate</strong>(<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr> $guild)
         </code>
@@ -637,7 +668,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_clear">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Providers/SettingProvider.php#L91">line 91</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Providers/SettingProvider.php#L120">line 120</a></div>
         <code>    abstract                mixed
     <strong>clear</strong>(string|<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr> $guild)
         </code>
@@ -688,7 +719,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_create">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Providers/SettingProvider.php#L51">line 51</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Providers/SettingProvider.php#L80">line 80</a></div>
         <code>    abstract                <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>create</strong>(string|<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr> $guild, array|<a href="https://secure.php.net/ArrayObject" target="_blank">ArrayObject</a> $settings = array())
         </code>
@@ -744,7 +775,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_destroy">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Providers/SettingProvider.php#L42">line 42</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Providers/SettingProvider.php#L71">line 71</a></div>
         <code>    abstract                mixed|void
     <strong>destroy</strong>()
         </code>
@@ -776,7 +807,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_get">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Providers/SettingProvider.php#L62">line 62</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Providers/SettingProvider.php#L91">line 91</a></div>
         <code>    abstract                mixed
     <strong>get</strong>(string|<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr> $guild, string $key, mixed $defaultValue = null)
         </code>
@@ -841,7 +872,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getGuildID">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Providers/SettingProvider.php#L99">line 99</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Providers/SettingProvider.php#L128">line 128</a></div>
         <code>                    string
     <strong>getGuildID</strong>(<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr>|string|int|null $guild)
         </code>
@@ -891,8 +922,40 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_getState">
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Providers/SettingProvider.php#L56">line 56</a></div>
+        <code>                    int
+    <strong>getState</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the provider state.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_init">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Providers/SettingProvider.php#L36">line 36</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Providers/SettingProvider.php#L65">line 65</a></div>
         <code>    abstract                <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>init</strong>(<a href="../../../CharlotteDunois/Livia/LiviaClient.html"><abbr title="CharlotteDunois\Livia\LiviaClient">LiviaClient</abbr></a> $client)
         </code>
@@ -934,7 +997,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_remove">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Providers/SettingProvider.php#L83">line 83</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Providers/SettingProvider.php#L112">line 112</a></div>
         <code>    abstract                mixed
     <strong>remove</strong>(string|<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr> $guild, string $key)
         </code>
@@ -994,7 +1057,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_removeListeners">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Providers/SettingProvider.php#L134">line 134</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Providers/SettingProvider.php#L163">line 163</a></div>
         <code>                    void
     <strong>removeListeners</strong>()
         </code>
@@ -1035,7 +1098,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_set">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Providers/SettingProvider.php#L73">line 73</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Providers/SettingProvider.php#L102">line 102</a></div>
         <code>    abstract                mixed
     <strong>set</strong>(string|<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr> $guild, string $key, mixed $value)
         </code>
@@ -1100,7 +1163,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setupGuild">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Providers/SettingProvider.php#L154">line 154</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Providers/SettingProvider.php#L183">line 183</a></div>
         <code>                    void
     <strong>setupGuild</strong>(string|<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr> $guild)
         </code>
@@ -1142,7 +1205,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setupGuildCommand">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Providers/SettingProvider.php#L187">line 187</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Providers/SettingProvider.php#L216">line 216</a></div>
         <code>                    void
     <strong>setupGuildCommand</strong>(string|<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr> $guild, <a href="../../../CharlotteDunois/Livia/Commands/Command.html"><abbr title="CharlotteDunois\Livia\Commands\Command">Command</abbr></a> $command, array|<a href="https://secure.php.net/ArrayObject" target="_blank">ArrayObject</a> $settings)
         </code>
@@ -1194,7 +1257,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setupGuildGroup">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Providers/SettingProvider.php#L202">line 202</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Providers/SettingProvider.php#L231">line 231</a></div>
         <code>                    void
     <strong>setupGuildGroup</strong>(string|<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr> $guild, <a href="../../../CharlotteDunois/Livia/Commands/CommandGroup.html"><abbr title="CharlotteDunois\Livia\Commands\CommandGroup">CommandGroup</abbr></a> $group, array|<a href="https://secure.php.net/ArrayObject" target="_blank">ArrayObject</a> $settings)
         </code>
