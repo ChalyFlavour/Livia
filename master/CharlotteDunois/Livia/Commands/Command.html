@@ -244,6 +244,14 @@
                 <td></td>
             </tr>
                     <tr>
+                <td class="type" id="property_hidden">
+                                                                                bool
+                </td>
+                <td><a name="property_hidden" href="#property_hidden">$hidden</a></td>
+                <td class="last">Whether the command is hidden in the <code>help</code> command overview.</td>
+                <td></td>
+            </tr>
+                    <tr>
                 <td class="type" id="property_name">
                                                                                 string
                 </td>
@@ -405,7 +413,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Commands/Command.php#L229">line 229</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Commands/Command.php#L237">line 237</a></div>
         <code>                    
     <strong>__construct</strong>(<a href="../../../CharlotteDunois/Livia/LiviaClient.html"><abbr title="CharlotteDunois\Livia\LiviaClient">LiviaClient</abbr></a> $client, array $info)
         </code>
@@ -437,6 +445,7 @@
   'argsSingleQuotes' =&gt; bool, (optional)
   'patterns' =&gt; string[], (Regular Expression strings, pattern matches don't get parsed for arguments, optional)
   'guarded' =&gt; bool, (defaults to false)
+  'hidden' =&gt; bool, (defaults to false)
 )
 </code></pre>
 </p>                            </div>
@@ -476,7 +485,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_anyUsage">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Commands/Command.php#L595">line 595</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Commands/Command.php#L599">line 599</a></div>
         <code>        static            string
     <strong>anyUsage</strong>(string $command, string $prefix = null, <abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr> $user = null)
         </code>
@@ -528,7 +537,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_hasPermission">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Commands/Command.php#L387">line 387</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Commands/Command.php#L391">line 391</a></div>
         <code>                    bool|string
     <strong>hasPermission</strong>(<a href="../../../CharlotteDunois/Livia/CommandMessage.html"><abbr title="CharlotteDunois\Livia\CommandMessage">CommandMessage</abbr></a> $message, bool $ownerOverride = true)
         </code>
@@ -575,7 +584,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_isEnabledIn">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Commands/Command.php#L543">line 543</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Commands/Command.php#L547">line 547</a></div>
         <code>                    bool
     <strong>isEnabledIn</strong>(<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr>|string|int|null $guild)
         </code>
@@ -626,7 +635,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_isUsable">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Commands/Command.php#L557">line 557</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Commands/Command.php#L561">line 561</a></div>
         <code>                    bool
     <strong>isUsable</strong>(<a href="../../../CharlotteDunois/Livia/CommandMessage.html"><abbr title="CharlotteDunois\Livia\CommandMessage">CommandMessage</abbr></a>|null $message = null)
         </code>
@@ -668,7 +677,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_reload">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Commands/Command.php#L444">line 444</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Commands/Command.php#L448">line 448</a></div>
         <code>                    void
     <strong>reload</strong>()
         </code>
@@ -709,7 +718,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_run">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Commands/Command.php#L437">line 437</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Commands/Command.php#L441">line 441</a></div>
         <code>    abstract                <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>|<abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>[]|<abbr title="CharlotteDunois\Yasmin\Models\Message">Message</abbr>|<abbr title="CharlotteDunois\Yasmin\Models\Message">Message</abbr>[]|null|void
     <strong>run</strong>(<a href="../../../CharlotteDunois/Livia/CommandMessage.html"><abbr title="CharlotteDunois\Livia\CommandMessage">CommandMessage</abbr></a> $message, <a href="https://secure.php.net/ArrayObject" target="_blank">ArrayObject</a> $args, bool $fromPattern)
         </code>
@@ -761,7 +770,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setEnabledIn">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Commands/Command.php#L518">line 518</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Commands/Command.php#L522">line 522</a></div>
         <code>                    bool
     <strong>setEnabledIn</strong>(string|int|<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr>|null $guild, bool $enabled)
         </code>
@@ -821,7 +830,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_unload">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Commands/Command.php#L453">line 453</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Commands/Command.php#L457">line 457</a></div>
         <code>                    void
     <strong>unload</strong>()
         </code>
@@ -862,7 +871,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_usage">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Commands/Command.php#L576">line 576</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Commands/Command.php#L580">line 580</a></div>
         <code>                    string
     <strong>usage</strong>(string $argString, string $prefix = null, <abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr> $user = null)
         </code>

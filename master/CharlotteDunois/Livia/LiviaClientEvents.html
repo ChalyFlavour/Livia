@@ -123,6 +123,16 @@
                     void
                 </div>
                 <div class="col-md-8 type">
+                    <a href="#method_commandCancelled">commandCancelled</a>(<a href="../../CharlotteDunois/Livia/CommandMessage.html"><abbr title="CharlotteDunois\Livia\CommandMessage">CommandMessage</abbr></a> $message, string $reason)
+        
+                                            <p>Emitted when a command was cancelled.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_commandError">commandError</a>(<a href="../../CharlotteDunois/Livia/Commands/Command.html"><abbr title="CharlotteDunois\Livia\Commands\Command">Command</abbr></a> $command, <a href="https://secure.php.net/Throwable" target="_blank">Throwable</a> $error, <a href="../../CharlotteDunois/Livia/CommandMessage.html"><abbr title="CharlotteDunois\Livia\CommandMessage">CommandMessage</abbr></a> $message, <a href="https://secure.php.net/ArrayObject" target="_blank">ArrayObject</a> $args, bool $fromPattern)
         
                                             <p>Emitted when a command produces an error while running.</p>                </div>
@@ -292,8 +302,55 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_commandError">
+                    <h3 id="method_commandCancelled">
         <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/LiviaClientEvents.php#L32">line 32</a></div>
+        <code>                    void
+    <strong>commandCancelled</strong>(<a href="../../CharlotteDunois/Livia/CommandMessage.html"><abbr title="CharlotteDunois\Livia\CommandMessage">CommandMessage</abbr></a> $message, string $reason)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Emitted when a command was cancelled.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../CharlotteDunois/Livia/CommandMessage.html"><abbr title="CharlotteDunois\Livia\CommandMessage">CommandMessage</abbr></a></td>
+                <td>$message</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$reason</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_commandError">
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/LiviaClientEvents.php#L38">line 38</a></div>
         <code>                    void
     <strong>commandError</strong>(<a href="../../CharlotteDunois/Livia/Commands/Command.html"><abbr title="CharlotteDunois\Livia\Commands\Command">Command</abbr></a> $command, <a href="https://secure.php.net/Throwable" target="_blank">Throwable</a> $error, <a href="../../CharlotteDunois/Livia/CommandMessage.html"><abbr title="CharlotteDunois\Livia\CommandMessage">CommandMessage</abbr></a> $message, <a href="https://secure.php.net/ArrayObject" target="_blank">ArrayObject</a> $args, bool $fromPattern)
         </code>
@@ -355,7 +412,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_commandPrefixChange">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/LiviaClientEvents.php#L82">line 82</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/LiviaClientEvents.php#L88">line 88</a></div>
         <code>                    void
     <strong>commandPrefixChange</strong>(<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr>|null $guild, string|null $newPrefix)
         </code>
@@ -402,7 +459,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_commandRegister">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/LiviaClientEvents.php#L50">line 50</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/LiviaClientEvents.php#L56">line 56</a></div>
         <code>                    void
     <strong>commandRegister</strong>(<a href="../../CharlotteDunois/Livia/Commands/Command.html"><abbr title="CharlotteDunois\Livia\Commands\Command">Command</abbr></a> $command, <a href="../../CharlotteDunois/Livia/CommandRegistry.html"><abbr title="CharlotteDunois\Livia\CommandRegistry">CommandRegistry</abbr></a> $registry)
         </code>
@@ -449,7 +506,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_commandReregister">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/LiviaClientEvents.php#L56">line 56</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/LiviaClientEvents.php#L62">line 62</a></div>
         <code>                    void
     <strong>commandReregister</strong>(<a href="../../CharlotteDunois/Livia/Commands/Command.html"><abbr title="CharlotteDunois\Livia\Commands\Command">Command</abbr></a> $command, <a href="../../CharlotteDunois/Livia/Commands/Command.html"><abbr title="CharlotteDunois\Livia\Commands\Command">Command</abbr></a> $oldCommand, <a href="../../CharlotteDunois/Livia/CommandRegistry.html"><abbr title="CharlotteDunois\Livia\CommandRegistry">CommandRegistry</abbr></a> $registry)
         </code>
@@ -501,7 +558,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_commandRun">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/LiviaClientEvents.php#L38">line 38</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/LiviaClientEvents.php#L44">line 44</a></div>
         <code>                    void
     <strong>commandRun</strong>(<a href="../../CharlotteDunois/Livia/Commands/Command.html"><abbr title="CharlotteDunois\Livia\Commands\Command">Command</abbr></a> $command, <abbr title="React\Promise\PromiseInterface">PromiseInterface</abbr> $promise, <a href="../../CharlotteDunois/Livia/CommandMessage.html"><abbr title="CharlotteDunois\Livia\CommandMessage">CommandMessage</abbr></a> $message, <a href="https://secure.php.net/ArrayObject" target="_blank">ArrayObject</a> $args, bool $fromPattern)
         </code>
@@ -563,7 +620,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_commandStatusChange">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/LiviaClientEvents.php#L91">line 91</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/LiviaClientEvents.php#L97">line 97</a></div>
         <code>                    void
     <strong>commandStatusChange</strong>(<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr>|null $guild, <a href="../../CharlotteDunois/Livia/Commands/Command.html"><abbr title="CharlotteDunois\Livia\Commands\Command">Command</abbr></a> $command, bool $enabled)
         </code>
@@ -615,7 +672,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_commandUnregister">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/LiviaClientEvents.php#L62">line 62</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/LiviaClientEvents.php#L68">line 68</a></div>
         <code>                    void
     <strong>commandUnregister</strong>(<a href="../../CharlotteDunois/Livia/Commands/Command.html"><abbr title="CharlotteDunois\Livia\Commands\Command">Command</abbr></a> $command, <a href="../../CharlotteDunois/Livia/CommandRegistry.html"><abbr title="CharlotteDunois\Livia\CommandRegistry">CommandRegistry</abbr></a> $registry)
         </code>
@@ -662,7 +719,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_groupRegister">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/LiviaClientEvents.php#L68">line 68</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/LiviaClientEvents.php#L74">line 74</a></div>
         <code>                    void
     <strong>groupRegister</strong>(<a href="../../CharlotteDunois/Livia/Commands/CommandGroup.html"><abbr title="CharlotteDunois\Livia\Commands\CommandGroup">CommandGroup</abbr></a> $group, <a href="../../CharlotteDunois/Livia/CommandRegistry.html"><abbr title="CharlotteDunois\Livia\CommandRegistry">CommandRegistry</abbr></a> $registry)
         </code>
@@ -709,7 +766,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_groupStatusChange">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/LiviaClientEvents.php#L100">line 100</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/LiviaClientEvents.php#L106">line 106</a></div>
         <code>                    void
     <strong>groupStatusChange</strong>(<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr>|null $guild, <a href="../../CharlotteDunois/Livia/Commands/CommandGroup.html"><abbr title="CharlotteDunois\Livia\Commands\CommandGroup">CommandGroup</abbr></a> $group, bool $enabled)
         </code>
@@ -761,7 +818,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_typeRegister">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/LiviaClientEvents.php#L74">line 74</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/LiviaClientEvents.php#L80">line 80</a></div>
         <code>                    void
     <strong>typeRegister</strong>(<a href="../../CharlotteDunois/Livia/Types/ArgumentType.html"><abbr title="CharlotteDunois\Livia\Types\ArgumentType">ArgumentType</abbr></a> $type, <a href="../../CharlotteDunois/Livia/CommandRegistry.html"><abbr title="CharlotteDunois\Livia\CommandRegistry">CommandRegistry</abbr></a> $registry)
         </code>
@@ -808,7 +865,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_unknownCommand">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/LiviaClientEvents.php#L44">line 44</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/LiviaClientEvents.php#L50">line 50</a></div>
         <code>                    void
     <strong>unknownCommand</strong>(<a href="../../CharlotteDunois/Livia/CommandMessage.html"><abbr title="CharlotteDunois\Livia\CommandMessage">CommandMessage</abbr></a> $message)
         </code>
