@@ -197,6 +197,14 @@
                 <td></td>
             </tr>
                     <tr>
+                <td class="type" id="property_typeID">
+                                                                                string|null
+                </td>
+                <td><a name="property_typeID" href="#property_typeID">$typeID</a></td>
+                <td class="last">Type name of the argument.</td>
+                <td></td>
+            </tr>
+                    <tr>
                 <td class="type" id="property_validate">
                                                                                 callable|null
                 </td>
@@ -246,7 +254,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Arguments/Argument.php#L132">line 132</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Arguments/Argument.php#L134">line 134</a></div>
         <code>                    
     <strong>__construct</strong>(<a href="../../../CharlotteDunois/Livia/LiviaClient.html"><abbr title="CharlotteDunois\Livia\LiviaClient">LiviaClient</abbr></a> $client, array $info)
         </code>
@@ -260,7 +268,7 @@
   'key' =&gt; string, (Key for the argument)
   'label' =&gt; string, (Label for the argument, defaults to key)
   'prompt' =&gt; string, (First prompt for the argument when it wasn't specified)
-  'type' =&gt; string, (Type of the argument, must be the ID of one of the registered argument types)
+  'type' =&gt; string|null, (Type of the argument, must be the ID of one of the registered argument types)
   'max' =&gt; int|float, (If type is integer or float this is the maximum value, if type is string this is the maximum length, optional)
   'min' =&gt; int|float, (If type is integer or float this is the minimum value, if type is string this is the minimum length, optional)
   'default' =&gt; mixed, (Default value for the argumen, must not be null, optional)
@@ -308,7 +316,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_obtain">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Arguments/Argument.php#L262">line 262</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Arguments/Argument.php#L264">line 264</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>obtain</strong>(<a href="../../../CharlotteDunois/Livia/CommandMessage.html"><abbr title="CharlotteDunois\Livia\CommandMessage">CommandMessage</abbr></a> $message, string|string[] $value, <a href="../../../CharlotteDunois/Livia/Arguments/ArgumentBag.html"><abbr title="CharlotteDunois\Livia\Arguments\ArgumentBag">ArgumentBag</abbr></a> $bag, bool|string|null $valid = null)
         </code>
