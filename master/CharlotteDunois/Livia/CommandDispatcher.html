@@ -152,6 +152,16 @@
                                             <p>Removes an inhibitor.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_throttleNegativeResponseMessage">throttleNegativeResponseMessage</a>(<a href="../../CharlotteDunois/Livia/CommandMessage.html"><abbr title="CharlotteDunois\Livia\CommandMessage">CommandMessage</abbr></a> $message, string $response, callable $resolve, callable $reject)
+        
+                                            <p>Throttles negative response messages (such as throttling, not a nsfw channel, command blocked, etc.). Used exclusively for and by <code>CommandMessage</code>.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
             </div>
 
 
@@ -160,7 +170,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_addInhibitor">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandDispatcher.php#L133">line 133</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandDispatcher.php#L139">line 139</a></div>
         <code>                    $this
     <strong>addInhibitor</strong>(callable $inhibitor)
         </code>
@@ -209,7 +219,7 @@ The inhibitor can return a Promise (for async computation), but has to resolve w
             </div>
                     <div class="method-item">
                     <h3 id="method_handleMessage">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandDispatcher.php#L161">line 161</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandDispatcher.php#L167">line 167</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>handleMessage</strong>(<abbr title="CharlotteDunois\Yasmin\Models\Message">Message</abbr> $message, <abbr title="CharlotteDunois\Yasmin\Models\Message">Message</abbr> $oldMessage = null)
         </code>
@@ -256,7 +266,7 @@ The inhibitor can return a Promise (for async computation), but has to resolve w
             </div>
                     <div class="method-item">
                     <h3 id="method_removeInhibitor">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandDispatcher.php#L146">line 146</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandDispatcher.php#L152">line 152</a></div>
         <code>                    $this
     <strong>removeInhibitor</strong>(callable $inhibitor)
         </code>
@@ -284,6 +294,63 @@ The inhibitor can return a Promise (for async computation), but has to resolve w
                     <table class="table table-condensed">
         <tr>
             <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_throttleNegativeResponseMessage">
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandDispatcher.php#L462">line 462</a></div>
+        <code>                    void
+    <strong>throttleNegativeResponseMessage</strong>(<a href="../../CharlotteDunois/Livia/CommandMessage.html"><abbr title="CharlotteDunois\Livia\CommandMessage">CommandMessage</abbr></a> $message, string $response, callable $resolve, callable $reject)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Throttles negative response messages (such as throttling, not a nsfw channel, command blocked, etc.). Used exclusively for and by <code>CommandMessage</code>.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../CharlotteDunois/Livia/CommandMessage.html"><abbr title="CharlotteDunois\Livia\CommandMessage">CommandMessage</abbr></a></td>
+                <td>$message</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$response</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>$resolve</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>$reject</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
             <td></td>
         </tr>
     </table>
