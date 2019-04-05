@@ -330,7 +330,7 @@
                     bool|string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_hasPermission">hasPermission</a>(<a href="../../../CharlotteDunois/Livia/CommandMessage.html"><abbr title="CharlotteDunois\Livia\CommandMessage">CommandMessage</abbr></a> $message, bool $ownerOverride = true)
+                    <a href="#method_hasPermission">hasPermission</a>(<a href="../../../CharlotteDunois/Livia/Commands/Context.html"><abbr title="CharlotteDunois\Livia\Commands\Context">Context</abbr></a> $context, bool $ownerOverride = true)
         
                                             <p>Checks if the user has permission to use the command.</p>                </div>
                 <div class="col-md-2"></div>
@@ -350,7 +350,7 @@
                     bool
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_isUsable">isUsable</a>(<a href="../../../CharlotteDunois/Livia/CommandMessage.html"><abbr title="CharlotteDunois\Livia\CommandMessage">CommandMessage</abbr></a>|null $message = null)
+                    <a href="#method_isUsable">isUsable</a>(<a href="../../../CharlotteDunois/Livia/Commands/Context.html"><abbr title="CharlotteDunois\Livia\Commands\Context">Context</abbr></a>|null $context = null)
         
                                             <p>Checks if the command is usable for a message.</p>                </div>
                 <div class="col-md-2"></div>
@@ -370,7 +370,7 @@
                     <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>|<abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>[]|<abbr title="CharlotteDunois\Yasmin\Models\Message">Message</abbr>|<abbr title="CharlotteDunois\Yasmin\Models\Message">Message</abbr>[]|null|void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_run">run</a>(<a href="../../../CharlotteDunois/Livia/CommandMessage.html"><abbr title="CharlotteDunois\Livia\CommandMessage">CommandMessage</abbr></a> $message, <a href="https://secure.php.net/ArrayObject" target="_blank">ArrayObject</a> $args, bool $fromPattern)
+                    <a href="#method_run">run</a>(<a href="../../../CharlotteDunois/Livia/Commands/Context.html"><abbr title="CharlotteDunois\Livia\Commands\Context">Context</abbr></a> $context, <a href="https://secure.php.net/ArrayObject" target="_blank">ArrayObject</a> $args, bool $fromPattern)
         
                                             <p>Runs the command. The method must return null, an array of Message instances or an instance of Message, a Promise that resolves to an instance of Message, or an array of Message instances. The array can contain Promises which each resolves to an instance of Message.</p>                </div>
                 <div class="col-md-2"></div>
@@ -539,7 +539,7 @@
                     <h3 id="method_hasPermission">
         <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Commands/Command.php#L391">line 391</a></div>
         <code>                    bool|string
-    <strong>hasPermission</strong>(<a href="../../../CharlotteDunois/Livia/CommandMessage.html"><abbr title="CharlotteDunois\Livia\CommandMessage">CommandMessage</abbr></a> $message, bool $ownerOverride = true)
+    <strong>hasPermission</strong>(<a href="../../../CharlotteDunois/Livia/Commands/Context.html"><abbr title="CharlotteDunois\Livia\Commands\Context">Context</abbr></a> $context, bool $ownerOverride = true)
         </code>
     </h3>
     <div class="details">
@@ -553,8 +553,8 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="../../../CharlotteDunois/Livia/CommandMessage.html"><abbr title="CharlotteDunois\Livia\CommandMessage">CommandMessage</abbr></a></td>
-                <td>$message</td>
+                <td><a href="../../../CharlotteDunois/Livia/Commands/Context.html"><abbr title="CharlotteDunois\Livia\Commands\Context">Context</abbr></a></td>
+                <td>$context</td>
                 <td></td>
             </tr>
                     <tr>
@@ -637,7 +637,7 @@
                     <h3 id="method_isUsable">
         <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Commands/Command.php#L561">line 561</a></div>
         <code>                    bool
-    <strong>isUsable</strong>(<a href="../../../CharlotteDunois/Livia/CommandMessage.html"><abbr title="CharlotteDunois\Livia\CommandMessage">CommandMessage</abbr></a>|null $message = null)
+    <strong>isUsable</strong>(<a href="../../../CharlotteDunois/Livia/Commands/Context.html"><abbr title="CharlotteDunois\Livia\Commands\Context">Context</abbr></a>|null $context = null)
         </code>
     </h3>
     <div class="details">
@@ -651,8 +651,8 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="../../../CharlotteDunois/Livia/CommandMessage.html"><abbr title="CharlotteDunois\Livia\CommandMessage">CommandMessage</abbr></a>|null</td>
-                <td>$message</td>
+                <td><a href="../../../CharlotteDunois/Livia/Commands/Context.html"><abbr title="CharlotteDunois\Livia\Commands\Context">Context</abbr></a>|null</td>
+                <td>$context</td>
                 <td></td>
             </tr>
             </table>
@@ -720,7 +720,7 @@
                     <h3 id="method_run">
         <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Commands/Command.php#L441">line 441</a></div>
         <code>    abstract                <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>|<abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>[]|<abbr title="CharlotteDunois\Yasmin\Models\Message">Message</abbr>|<abbr title="CharlotteDunois\Yasmin\Models\Message">Message</abbr>[]|null|void
-    <strong>run</strong>(<a href="../../../CharlotteDunois/Livia/CommandMessage.html"><abbr title="CharlotteDunois\Livia\CommandMessage">CommandMessage</abbr></a> $message, <a href="https://secure.php.net/ArrayObject" target="_blank">ArrayObject</a> $args, bool $fromPattern)
+    <strong>run</strong>(<a href="../../../CharlotteDunois/Livia/Commands/Context.html"><abbr title="CharlotteDunois\Livia\Commands\Context">Context</abbr></a> $context, <a href="https://secure.php.net/ArrayObject" target="_blank">ArrayObject</a> $args, bool $fromPattern)
         </code>
     </h3>
     <div class="details">
@@ -734,14 +734,14 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="../../../CharlotteDunois/Livia/CommandMessage.html"><abbr title="CharlotteDunois\Livia\CommandMessage">CommandMessage</abbr></a></td>
-                <td>$message</td>
-                <td>The message the command is being run for.</td>
+                <td><a href="../../../CharlotteDunois/Livia/Commands/Context.html"><abbr title="CharlotteDunois\Livia\Commands\Context">Context</abbr></a></td>
+                <td>$context</td>
+                <td>The context the command is being run for.</td>
             </tr>
                     <tr>
                 <td><a href="https://secure.php.net/ArrayObject" target="_blank">ArrayObject</a></td>
                 <td>$args</td>
-                <td>The arguments for the command, or the matches from a pattern. If args is specified on the command, thise will be the argument values object. If argsType is single, then only one string will be passed. If multiple, an array of strings will be passed. When fromPattern is true, this is the matches array from the pattern match.</td>
+                <td>The arguments for the command, or the matches from a pattern. If args is specified on the command, this will be the argument values object. If argsType is single, then only one string will be passed. If multiple, an array of strings will be passed. When fromPattern is true, this is the matches array from the pattern match.</td>
             </tr>
                     <tr>
                 <td>bool</td>

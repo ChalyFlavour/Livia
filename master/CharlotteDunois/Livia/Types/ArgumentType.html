@@ -135,7 +135,7 @@
                     bool
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_isEmpty">isEmpty</a>(mixed $value, <a href="../../../CharlotteDunois/Livia/CommandMessage.html"><abbr title="CharlotteDunois\Livia\CommandMessage">CommandMessage</abbr></a> $message, <a href="../../../CharlotteDunois/Livia/Arguments/Argument.html"><abbr title="CharlotteDunois\Livia\Arguments\Argument">Argument</abbr></a>|null $arg = null)
+                    <a href="#method_isEmpty">isEmpty</a>(mixed $value, <a href="../../../CharlotteDunois/Livia/Commands/Context.html"><abbr title="CharlotteDunois\Livia\Commands\Context">Context</abbr></a> $context, <a href="../../../CharlotteDunois/Livia/Arguments/Argument.html"><abbr title="CharlotteDunois\Livia\Arguments\Argument">Argument</abbr></a>|null $arg = null)
         
                                             <p>Checks whether a value is considered to be empty. This determines whether the default value for an argument should be used and changes the response to the user under certain circumstances.</p>                </div>
                 <div class="col-md-2"></div>
@@ -145,7 +145,7 @@
                     mixed|null|<abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_parse">parse</a>(string $value, <a href="../../../CharlotteDunois/Livia/CommandMessage.html"><abbr title="CharlotteDunois\Livia\CommandMessage">CommandMessage</abbr></a> $message, <a href="../../../CharlotteDunois/Livia/Arguments/Argument.html"><abbr title="CharlotteDunois\Livia\Arguments\Argument">Argument</abbr></a>|null $arg = null)
+                    <a href="#method_parse">parse</a>(string $value, <a href="../../../CharlotteDunois/Livia/Commands/Context.html"><abbr title="CharlotteDunois\Livia\Commands\Context">Context</abbr></a> $context, <a href="../../../CharlotteDunois/Livia/Arguments/Argument.html"><abbr title="CharlotteDunois\Livia\Arguments\Argument">Argument</abbr></a>|null $arg = null)
         
                                             <p>Parses a value into an usable value. If the return is a promise, the promise has to resolve with one of the other return types.</p>                </div>
                 <div class="col-md-2"></div>
@@ -155,7 +155,7 @@
                     bool|string|<abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_validate">validate</a>(string $value, <a href="../../../CharlotteDunois/Livia/CommandMessage.html"><abbr title="CharlotteDunois\Livia\CommandMessage">CommandMessage</abbr></a> $message, <a href="../../../CharlotteDunois/Livia/Arguments/Argument.html"><abbr title="CharlotteDunois\Livia\Arguments\Argument">Argument</abbr></a>|null $arg = null)
+                    <a href="#method_validate">validate</a>(string $value, <a href="../../../CharlotteDunois/Livia/Commands/Context.html"><abbr title="CharlotteDunois\Livia\Commands\Context">Context</abbr></a> $context, <a href="../../../CharlotteDunois/Livia/Arguments/Argument.html"><abbr title="CharlotteDunois\Livia\Arguments\Argument">Argument</abbr></a>|null $arg = null)
         
                                             <p>Validates a value against the type. If the return is a promise, the promise has to resolve with one of the other return types.</p>                </div>
                 <div class="col-md-2"></div>
@@ -170,7 +170,7 @@
                     <h3 id="method_isEmpty">
         <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Types/ArgumentType.php#L127">line 127</a></div>
         <code>                    bool
-    <strong>isEmpty</strong>(mixed $value, <a href="../../../CharlotteDunois/Livia/CommandMessage.html"><abbr title="CharlotteDunois\Livia\CommandMessage">CommandMessage</abbr></a> $message, <a href="../../../CharlotteDunois/Livia/Arguments/Argument.html"><abbr title="CharlotteDunois\Livia\Arguments\Argument">Argument</abbr></a>|null $arg = null)
+    <strong>isEmpty</strong>(mixed $value, <a href="../../../CharlotteDunois/Livia/Commands/Context.html"><abbr title="CharlotteDunois\Livia\Commands\Context">Context</abbr></a> $context, <a href="../../../CharlotteDunois/Livia/Arguments/Argument.html"><abbr title="CharlotteDunois\Livia\Arguments\Argument">Argument</abbr></a>|null $arg = null)
         </code>
     </h3>
     <div class="details">
@@ -189,8 +189,8 @@
                 <td>Value to check.</td>
             </tr>
                     <tr>
-                <td><a href="../../../CharlotteDunois/Livia/CommandMessage.html"><abbr title="CharlotteDunois\Livia\CommandMessage">CommandMessage</abbr></a></td>
-                <td>$message</td>
+                <td><a href="../../../CharlotteDunois/Livia/Commands/Context.html"><abbr title="CharlotteDunois\Livia\Commands\Context">Context</abbr></a></td>
+                <td>$context</td>
                 <td>Message the value was obtained from.</td>
             </tr>
                     <tr>
@@ -222,7 +222,7 @@
                     <h3 id="method_parse">
         <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Types/ArgumentType.php#L118">line 118</a></div>
         <code>    abstract                mixed|null|<abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
-    <strong>parse</strong>(string $value, <a href="../../../CharlotteDunois/Livia/CommandMessage.html"><abbr title="CharlotteDunois\Livia\CommandMessage">CommandMessage</abbr></a> $message, <a href="../../../CharlotteDunois/Livia/Arguments/Argument.html"><abbr title="CharlotteDunois\Livia\Arguments\Argument">Argument</abbr></a>|null $arg = null)
+    <strong>parse</strong>(string $value, <a href="../../../CharlotteDunois/Livia/Commands/Context.html"><abbr title="CharlotteDunois\Livia\Commands\Context">Context</abbr></a> $context, <a href="../../../CharlotteDunois/Livia/Arguments/Argument.html"><abbr title="CharlotteDunois\Livia\Arguments\Argument">Argument</abbr></a>|null $arg = null)
         </code>
     </h3>
     <div class="details">
@@ -241,8 +241,8 @@
                 <td>Value to parse.</td>
             </tr>
                     <tr>
-                <td><a href="../../../CharlotteDunois/Livia/CommandMessage.html"><abbr title="CharlotteDunois\Livia\CommandMessage">CommandMessage</abbr></a></td>
-                <td>$message</td>
+                <td><a href="../../../CharlotteDunois/Livia/Commands/Context.html"><abbr title="CharlotteDunois\Livia\Commands\Context">Context</abbr></a></td>
+                <td>$context</td>
                 <td>Message the value was obtained from.</td>
             </tr>
                     <tr>
@@ -283,7 +283,7 @@
                     <h3 id="method_validate">
         <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Types/ArgumentType.php#L108">line 108</a></div>
         <code>    abstract                bool|string|<abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
-    <strong>validate</strong>(string $value, <a href="../../../CharlotteDunois/Livia/CommandMessage.html"><abbr title="CharlotteDunois\Livia\CommandMessage">CommandMessage</abbr></a> $message, <a href="../../../CharlotteDunois/Livia/Arguments/Argument.html"><abbr title="CharlotteDunois\Livia\Arguments\Argument">Argument</abbr></a>|null $arg = null)
+    <strong>validate</strong>(string $value, <a href="../../../CharlotteDunois/Livia/Commands/Context.html"><abbr title="CharlotteDunois\Livia\Commands\Context">Context</abbr></a> $context, <a href="../../../CharlotteDunois/Livia/Arguments/Argument.html"><abbr title="CharlotteDunois\Livia\Arguments\Argument">Argument</abbr></a>|null $arg = null)
         </code>
     </h3>
     <div class="details">
@@ -302,8 +302,8 @@
                 <td>Value to validate.</td>
             </tr>
                     <tr>
-                <td><a href="../../../CharlotteDunois/Livia/CommandMessage.html"><abbr title="CharlotteDunois\Livia\CommandMessage">CommandMessage</abbr></a></td>
-                <td>$message</td>
+                <td><a href="../../../CharlotteDunois/Livia/Commands/Context.html"><abbr title="CharlotteDunois\Livia\Commands\Context">Context</abbr></a></td>
+                <td>$context</td>
                 <td>Message the value was obtained from.</td>
             </tr>
                     <tr>

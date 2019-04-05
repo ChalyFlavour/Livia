@@ -113,7 +113,7 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_commandBlocked">commandBlocked</a>(<a href="../../CharlotteDunois/Livia/CommandMessage.html"><abbr title="CharlotteDunois\Livia\CommandMessage">CommandMessage</abbr></a> $message, string $reason)
+                    <a href="#method_commandBlocked">commandBlocked</a>(<a href="../../CharlotteDunois/Livia/Commands/Context.html"><abbr title="CharlotteDunois\Livia\Commands\Context">Context</abbr></a> $context, string $reason)
         
                                             <p>Emitted when a command is prevented from running.</p>                </div>
                 <div class="col-md-2"></div>
@@ -123,7 +123,7 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_commandCancelled">commandCancelled</a>(<a href="../../CharlotteDunois/Livia/CommandMessage.html"><abbr title="CharlotteDunois\Livia\CommandMessage">CommandMessage</abbr></a> $message, string $reason)
+                    <a href="#method_commandCancelled">commandCancelled</a>(<a href="../../CharlotteDunois/Livia/Commands/Context.html"><abbr title="CharlotteDunois\Livia\Commands\Context">Context</abbr></a> $context, string $reason)
         
                                             <p>Emitted when a command was cancelled.</p>                </div>
                 <div class="col-md-2"></div>
@@ -133,7 +133,7 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_commandError">commandError</a>(<a href="../../CharlotteDunois/Livia/Commands/Command.html"><abbr title="CharlotteDunois\Livia\Commands\Command">Command</abbr></a> $command, <a href="https://secure.php.net/Throwable" target="_blank">Throwable</a> $error, <a href="../../CharlotteDunois/Livia/CommandMessage.html"><abbr title="CharlotteDunois\Livia\CommandMessage">CommandMessage</abbr></a> $message, <a href="https://secure.php.net/ArrayObject" target="_blank">ArrayObject</a> $args, bool $fromPattern)
+                    <a href="#method_commandError">commandError</a>(<a href="../../CharlotteDunois/Livia/Commands/Command.html"><abbr title="CharlotteDunois\Livia\Commands\Command">Command</abbr></a> $command, <a href="https://secure.php.net/Throwable" target="_blank">Throwable</a> $error, <a href="../../CharlotteDunois/Livia/Commands/Context.html"><abbr title="CharlotteDunois\Livia\Commands\Context">Context</abbr></a> $context, <a href="https://secure.php.net/ArrayObject" target="_blank">ArrayObject</a> $args, bool $fromPattern)
         
                                             <p>Emitted when a command produces an error while running.</p>                </div>
                 <div class="col-md-2"></div>
@@ -173,7 +173,7 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_commandRun">commandRun</a>(<a href="../../CharlotteDunois/Livia/Commands/Command.html"><abbr title="CharlotteDunois\Livia\Commands\Command">Command</abbr></a> $command, <abbr title="React\Promise\PromiseInterface">PromiseInterface</abbr> $promise, <a href="../../CharlotteDunois/Livia/CommandMessage.html"><abbr title="CharlotteDunois\Livia\CommandMessage">CommandMessage</abbr></a> $message, <a href="https://secure.php.net/ArrayObject" target="_blank">ArrayObject</a> $args, bool $fromPattern)
+                    <a href="#method_commandRun">commandRun</a>(<a href="../../CharlotteDunois/Livia/Commands/Command.html"><abbr title="CharlotteDunois\Livia\Commands\Command">Command</abbr></a> $command, <abbr title="React\Promise\PromiseInterface">PromiseInterface</abbr> $promise, <a href="../../CharlotteDunois/Livia/Commands/Context.html"><abbr title="CharlotteDunois\Livia\Commands\Context">Context</abbr></a> $context, <a href="https://secure.php.net/ArrayObject" target="_blank">ArrayObject</a> $args, bool $fromPattern)
         
                                             <p>Emitted when running a command.</p>                </div>
                 <div class="col-md-2"></div>
@@ -233,7 +233,7 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_unknownCommand">unknownCommand</a>(<a href="../../CharlotteDunois/Livia/CommandMessage.html"><abbr title="CharlotteDunois\Livia\CommandMessage">CommandMessage</abbr></a> $message)
+                    <a href="#method_unknownCommand">unknownCommand</a>(<a href="../../CharlotteDunois/Livia/Commands/Context.html"><abbr title="CharlotteDunois\Livia\Commands\Context">Context</abbr></a> $context)
         
                                             <p>Emitted when an user tries to use an unknown command.</p>                </div>
                 <div class="col-md-2"></div>
@@ -258,7 +258,7 @@
                     <h3 id="method_commandBlocked">
         <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/LiviaClientEvents.php#L26">line 26</a></div>
         <code>                    void
-    <strong>commandBlocked</strong>(<a href="../../CharlotteDunois/Livia/CommandMessage.html"><abbr title="CharlotteDunois\Livia\CommandMessage">CommandMessage</abbr></a> $message, string $reason)
+    <strong>commandBlocked</strong>(<a href="../../CharlotteDunois/Livia/Commands/Context.html"><abbr title="CharlotteDunois\Livia\Commands\Context">Context</abbr></a> $context, string $reason)
         </code>
     </h3>
     <div class="details">
@@ -272,8 +272,8 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="../../CharlotteDunois/Livia/CommandMessage.html"><abbr title="CharlotteDunois\Livia\CommandMessage">CommandMessage</abbr></a></td>
-                <td>$message</td>
+                <td><a href="../../CharlotteDunois/Livia/Commands/Context.html"><abbr title="CharlotteDunois\Livia\Commands\Context">Context</abbr></a></td>
+                <td>$context</td>
                 <td></td>
             </tr>
                     <tr>
@@ -305,7 +305,7 @@
                     <h3 id="method_commandCancelled">
         <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/LiviaClientEvents.php#L32">line 32</a></div>
         <code>                    void
-    <strong>commandCancelled</strong>(<a href="../../CharlotteDunois/Livia/CommandMessage.html"><abbr title="CharlotteDunois\Livia\CommandMessage">CommandMessage</abbr></a> $message, string $reason)
+    <strong>commandCancelled</strong>(<a href="../../CharlotteDunois/Livia/Commands/Context.html"><abbr title="CharlotteDunois\Livia\Commands\Context">Context</abbr></a> $context, string $reason)
         </code>
     </h3>
     <div class="details">
@@ -319,8 +319,8 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="../../CharlotteDunois/Livia/CommandMessage.html"><abbr title="CharlotteDunois\Livia\CommandMessage">CommandMessage</abbr></a></td>
-                <td>$message</td>
+                <td><a href="../../CharlotteDunois/Livia/Commands/Context.html"><abbr title="CharlotteDunois\Livia\Commands\Context">Context</abbr></a></td>
+                <td>$context</td>
                 <td></td>
             </tr>
                     <tr>
@@ -352,7 +352,7 @@
                     <h3 id="method_commandError">
         <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/LiviaClientEvents.php#L38">line 38</a></div>
         <code>                    void
-    <strong>commandError</strong>(<a href="../../CharlotteDunois/Livia/Commands/Command.html"><abbr title="CharlotteDunois\Livia\Commands\Command">Command</abbr></a> $command, <a href="https://secure.php.net/Throwable" target="_blank">Throwable</a> $error, <a href="../../CharlotteDunois/Livia/CommandMessage.html"><abbr title="CharlotteDunois\Livia\CommandMessage">CommandMessage</abbr></a> $message, <a href="https://secure.php.net/ArrayObject" target="_blank">ArrayObject</a> $args, bool $fromPattern)
+    <strong>commandError</strong>(<a href="../../CharlotteDunois/Livia/Commands/Command.html"><abbr title="CharlotteDunois\Livia\Commands\Command">Command</abbr></a> $command, <a href="https://secure.php.net/Throwable" target="_blank">Throwable</a> $error, <a href="../../CharlotteDunois/Livia/Commands/Context.html"><abbr title="CharlotteDunois\Livia\Commands\Context">Context</abbr></a> $context, <a href="https://secure.php.net/ArrayObject" target="_blank">ArrayObject</a> $args, bool $fromPattern)
         </code>
     </h3>
     <div class="details">
@@ -376,8 +376,8 @@
                 <td></td>
             </tr>
                     <tr>
-                <td><a href="../../CharlotteDunois/Livia/CommandMessage.html"><abbr title="CharlotteDunois\Livia\CommandMessage">CommandMessage</abbr></a></td>
-                <td>$message</td>
+                <td><a href="../../CharlotteDunois/Livia/Commands/Context.html"><abbr title="CharlotteDunois\Livia\Commands\Context">Context</abbr></a></td>
+                <td>$context</td>
                 <td></td>
             </tr>
                     <tr>
@@ -560,7 +560,7 @@
                     <h3 id="method_commandRun">
         <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/LiviaClientEvents.php#L44">line 44</a></div>
         <code>                    void
-    <strong>commandRun</strong>(<a href="../../CharlotteDunois/Livia/Commands/Command.html"><abbr title="CharlotteDunois\Livia\Commands\Command">Command</abbr></a> $command, <abbr title="React\Promise\PromiseInterface">PromiseInterface</abbr> $promise, <a href="../../CharlotteDunois/Livia/CommandMessage.html"><abbr title="CharlotteDunois\Livia\CommandMessage">CommandMessage</abbr></a> $message, <a href="https://secure.php.net/ArrayObject" target="_blank">ArrayObject</a> $args, bool $fromPattern)
+    <strong>commandRun</strong>(<a href="../../CharlotteDunois/Livia/Commands/Command.html"><abbr title="CharlotteDunois\Livia\Commands\Command">Command</abbr></a> $command, <abbr title="React\Promise\PromiseInterface">PromiseInterface</abbr> $promise, <a href="../../CharlotteDunois/Livia/Commands/Context.html"><abbr title="CharlotteDunois\Livia\Commands\Context">Context</abbr></a> $context, <a href="https://secure.php.net/ArrayObject" target="_blank">ArrayObject</a> $args, bool $fromPattern)
         </code>
     </h3>
     <div class="details">
@@ -584,8 +584,8 @@
                 <td></td>
             </tr>
                     <tr>
-                <td><a href="../../CharlotteDunois/Livia/CommandMessage.html"><abbr title="CharlotteDunois\Livia\CommandMessage">CommandMessage</abbr></a></td>
-                <td>$message</td>
+                <td><a href="../../CharlotteDunois/Livia/Commands/Context.html"><abbr title="CharlotteDunois\Livia\Commands\Context">Context</abbr></a></td>
+                <td>$context</td>
                 <td></td>
             </tr>
                     <tr>
@@ -867,7 +867,7 @@
                     <h3 id="method_unknownCommand">
         <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/LiviaClientEvents.php#L50">line 50</a></div>
         <code>                    void
-    <strong>unknownCommand</strong>(<a href="../../CharlotteDunois/Livia/CommandMessage.html"><abbr title="CharlotteDunois\Livia\CommandMessage">CommandMessage</abbr></a> $message)
+    <strong>unknownCommand</strong>(<a href="../../CharlotteDunois/Livia/Commands/Context.html"><abbr title="CharlotteDunois\Livia\Commands\Context">Context</abbr></a> $context)
         </code>
     </h3>
     <div class="details">
@@ -881,8 +881,8 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="../../CharlotteDunois/Livia/CommandMessage.html"><abbr title="CharlotteDunois\Livia\CommandMessage">CommandMessage</abbr></a></td>
-                <td>$message</td>
+                <td><a href="../../CharlotteDunois/Livia/Commands/Context.html"><abbr title="CharlotteDunois\Livia\Commands\Context">Context</abbr></a></td>
+                <td>$context</td>
                 <td></td>
             </tr>
             </table>
