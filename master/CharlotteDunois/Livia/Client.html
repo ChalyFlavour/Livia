@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="robots" content="index, follow, all" />
-    <title>CharlotteDunois\Livia\LiviaClient | Livia</title>
+    <title>CharlotteDunois\Livia\Client | Livia</title>
 
             <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
@@ -21,7 +21,7 @@
     
     </head>
 
-    <body id="class" data-name="class:CharlotteDunois_Livia_LiviaClient" data-root-path="../../">
+    <body id="class" data-name="class:CharlotteDunois_Livia_Client" data-root-path="../../">
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
@@ -80,20 +80,20 @@
                         <div class="namespace-breadcrumbs">
             <ol class="breadcrumb">
                 <li><span class="label label-default">class</span></li>
-                        <li><a href="../../CharlotteDunois.html">CharlotteDunois</a></li><li class="backslash">\</li><li><a href="../../CharlotteDunois/Livia.html">Livia</a></li><li class="backslash">\</li><li>LiviaClient</li>
+                        <li><a href="../../CharlotteDunois.html">CharlotteDunois</a></li><li class="backslash">\</li><li><a href="../../CharlotteDunois/Livia.html">Livia</a></li><li class="backslash">\</li><li>Client</li>
             </ol>
         </div>
                 <div id="page-content">
                 
     <div class="page-header">
         <h1>
-            LiviaClient
+            Client
                 
         </h1>
     </div>
 
     <p>    class
-    <strong>LiviaClient</strong>        extends <abbr title="CharlotteDunois\Yasmin\Client">Client</abbr>        (<a href="https://github.com/CharlotteDunois/Livia/blob/master/src/LiviaClient.php" target="_blank">View source</a>)
+    <strong>Client</strong>        extends <abbr title="CharlotteDunois\Yasmin\Client">Client</abbr>        (<a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Client.php" target="_blank">View source</a>)
 </p>
 
         
@@ -112,7 +112,7 @@
                                                                                 string|null
                 </td>
                 <td><a name="property_commandPrefix" href="#property_commandPrefix">$commandPrefix</a></td>
-                <td class="last">The global command prefix. (see LiviaClient::setCommandPrefix)</td>
+                <td class="last">The global command prefix. (see Client::setCommandPrefix)</td>
                 <td></td>
             </tr>
                     <tr>
@@ -128,7 +128,7 @@
                                                                                 <abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr>[]
                 </td>
                 <td><a name="property_owners" href="#property_owners">$owners</a></td>
-                <td class="last">Owners of the bot, set by the client option owners. If you simply need to check if a user is an owner of the bot, please use LiviaClient::isOwner instead. (see \CharlotteDunois\Livia\LiviaClient:isOwner)</td>
+                <td class="last">Owners of the bot, set by the client option owners. If you simply need to check if a user is an owner of the bot, please use Client::isOwner instead. (see \CharlotteDunois\Livia\Client:isOwner)</td>
                 <td></td>
             </tr>
                     <tr>
@@ -221,7 +221,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/LiviaClient.php#L64">line 64</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Client.php#L64">line 64</a></div>
         <code>                    
     <strong>__construct</strong>(array $options = array(), <abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr>|null $loop = null)
         </code>
@@ -288,7 +288,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getGuildPrefix">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/LiviaClient.php#L249">line 249</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Client.php#L249">line 249</a></div>
         <code>                    string|null
     <strong>getGuildPrefix</strong>(<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr>|null $guild = null)
         </code>
@@ -330,7 +330,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_isOwner">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/LiviaClient.php#L207">line 207</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Client.php#L207">line 207</a></div>
         <code>                    bool
     <strong>isOwner</strong>(string|<abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr>|<abbr title="CharlotteDunois\Yasmin\Models\GuildMember">GuildMember</abbr> $user)
         </code>
@@ -372,7 +372,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setCommandPrefix">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/LiviaClient.php#L188">line 188</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Client.php#L188">line 188</a></div>
         <code>                    $this
     <strong>setCommandPrefix</strong>(string|null $prefix, bool $fromProvider = false)
         </code>
@@ -428,7 +428,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setGuildPrefix">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/LiviaClient.php#L270">line 270</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Client.php#L270">line 270</a></div>
         <code>                    bool
     <strong>setGuildPrefix</strong>(<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr>|null $guild, string $prefix = null)
         </code>
@@ -475,7 +475,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setProvider">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/LiviaClient.php#L220">line 220</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/Client.php#L220">line 220</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setProvider</strong>(<a href="../../CharlotteDunois/Livia/Providers/SettingProvider.html"><abbr title="CharlotteDunois\Livia\Providers\SettingProvider">SettingProvider</abbr></a> $provider)
         </code>
