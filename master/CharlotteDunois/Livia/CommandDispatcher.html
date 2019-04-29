@@ -135,6 +135,26 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAwaiting">getAwaiting</a>(<a href="../../CharlotteDunois/Livia/Commands/Context.html"><abbr title="CharlotteDunois\Livia\Commands\Context">Context</abbr></a> $context)
+        
+                                            <p>Gets the optional value of an awaiting context for the message.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAwaitingsByID">getAwaitingsByID</a>(string $id)
+        
+                                            <p>Get all awaiting context values by a specific ID.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
                 </div>
                 <div class="col-md-8 type">
@@ -158,7 +178,17 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_throttleNegativeResponseMessage">throttleNegativeResponseMessage</a>(<a href="../../CharlotteDunois/Livia/Commands/Context.html"><abbr title="CharlotteDunois\Livia\Commands\Context">Context</abbr></a> $message, string $response, callable $resolve, callable $reject)
+                    <a href="#method_setAwaiting">setAwaiting</a>(<a href="../../CharlotteDunois/Livia/Commands/Context.html"><abbr title="CharlotteDunois\Livia\Commands\Context">Context</abbr></a> $context, mixed $value = null)
+        
+                                            <p>Sets the awaiting context for the message with an optional value.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_throttleNegativeResponseMessage">throttleNegativeResponseMessage</a>(<a href="../../CharlotteDunois/Livia/Commands/Context.html"><abbr title="CharlotteDunois\Livia\Commands\Context">Context</abbr></a> $context, string $response, callable $resolve, callable $reject)
         
                                             <p>Throttles negative response messages (such as throttling, not a nsfw channel, command blocked, etc.). Used exclusively for and by <code>Commands\Context</code>.</p>                </div>
                 <div class="col-md-2"></div>
@@ -206,6 +236,99 @@ The inhibitor can return a Promise (for async computation), but has to resolve w
                     <table class="table table-condensed">
         <tr>
             <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAwaiting">
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandDispatcher.php#L437">line 437</a></div>
+        <code>                    mixed
+    <strong>getAwaiting</strong>(<a href="../../CharlotteDunois/Livia/Commands/Context.html"><abbr title="CharlotteDunois\Livia\Commands\Context">Context</abbr></a> $context)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the optional value of an awaiting context for the message.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../CharlotteDunois/Livia/Commands/Context.html"><abbr title="CharlotteDunois\Livia\Commands\Context">Context</abbr></a></td>
+                <td>$context</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="https://secure.php.net/RuntimeException" target="_blank">RuntimeException</a></td>
+                <td>Thrown if the context does not exist.</td>
+            </tr>
+            </table>
+
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAwaitingsByID">
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandDispatcher.php#L475">line 475</a></div>
+        <code>                    mixed[]
+    <strong>getAwaitingsByID</strong>(string $id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get all awaiting context values by a specific ID.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed[]</td>
             <td></td>
         </tr>
     </table>
@@ -308,10 +431,66 @@ The inhibitor can return a Promise (for async computation), but has to resolve w
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_throttleNegativeResponseMessage">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandDispatcher.php#L462">line 462</a></div>
+                    <h3 id="method_setAwaiting">
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandDispatcher.php#L452">line 452</a></div>
         <code>                    void
-    <strong>throttleNegativeResponseMessage</strong>(<a href="../../CharlotteDunois/Livia/Commands/Context.html"><abbr title="CharlotteDunois\Livia\Commands\Context">Context</abbr></a> $message, string $response, callable $resolve, callable $reject)
+    <strong>setAwaiting</strong>(<a href="../../CharlotteDunois/Livia/Commands/Context.html"><abbr title="CharlotteDunois\Livia\Commands\Context">Context</abbr></a> $context, mixed $value = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the awaiting context for the message with an optional value.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../CharlotteDunois/Livia/Commands/Context.html"><abbr title="CharlotteDunois\Livia\Commands\Context">Context</abbr></a></td>
+                <td>$context</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="https://secure.php.net/RuntimeException" target="_blank">RuntimeException</a></td>
+                <td>Thrown if the context is already awaiting.</td>
+            </tr>
+            </table>
+
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_throttleNegativeResponseMessage">
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/master/src/CommandDispatcher.php#L495">line 495</a></div>
+        <code>                    void
+    <strong>throttleNegativeResponseMessage</strong>(<a href="../../CharlotteDunois/Livia/Commands/Context.html"><abbr title="CharlotteDunois\Livia\Commands\Context">Context</abbr></a> $context, string $response, callable $resolve, callable $reject)
         </code>
     </h3>
     <div class="details">
@@ -326,7 +505,7 @@ The inhibitor can return a Promise (for async computation), but has to resolve w
                     <table class="table table-condensed">
                     <tr>
                 <td><a href="../../CharlotteDunois/Livia/Commands/Context.html"><abbr title="CharlotteDunois\Livia\Commands\Context">Context</abbr></a></td>
-                <td>$message</td>
+                <td>$context</td>
                 <td></td>
             </tr>
                     <tr>
