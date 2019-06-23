@@ -1,0 +1,1468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>CharlotteDunois\Livia\Providers\MySQLProvider | Livia</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/prism.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <script src="../../../js/prism.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:CharlotteDunois_Livia_Providers_MySQLProvider" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../../v0.1.0/index.html" data-version="v0.1.0">v0.1.0</option>
+                                            <option value="../../../../v0.1.1/index.html" data-version="v0.1.1">v0.1.1</option>
+                                            <option value="../../../../v0.1.2/index.html" data-version="v0.1.2">v0.1.2</option>
+                                            <option value="../../../../v0.2.0/index.html" data-version="v0.2.0">v0.2.0</option>
+                                            <option value="../../../../v0.2.1/index.html" data-version="v0.2.1">v0.2.1</option>
+                                            <option value="../../../../v0.3.0/index.html" data-version="v0.3.0">v0.3.0</option>
+                                            <option value="../../../../v0.3.1/index.html" data-version="v0.3.1">v0.3.1</option>
+                                            <option value="../../../../v0.4.0/index.html" data-version="v0.4.0">v0.4.0</option>
+                                            <option value="../../../../v0.4.1/index.html" data-version="v0.4.1">v0.4.1</option>
+                                            <option value="../../../../master/index.html" data-version="master">master</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">Livia</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                                                <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../CharlotteDunois.html">CharlotteDunois</a></li><li class="backslash">\</li><li><a href="../../../CharlotteDunois/Livia.html">Livia</a></li><li class="backslash">\</li><li><a href="../../../CharlotteDunois/Livia/Providers.html">Providers</a></li><li class="backslash">\</li><li>MySQLProvider</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            MySQLProvider
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>MySQLProvider</strong>        extends <a href="../../../CharlotteDunois/Livia/Providers/SettingProvider.html"><abbr title="CharlotteDunois\Livia\Providers\SettingProvider">SettingProvider</abbr></a>        (<a href="https://github.com/CharlotteDunois/Livia/blob/v0.4.1/src/Providers/MySQLProvider.php" target="_blank">View source</a>)
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Loads and stores settings associated with guilds in a MySQL database. Requires the composer package react/mysql.</p>                                </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>STATE_IDLE</td>
+                <td class="last">
+                    <p><em>The Provider state, idling waiting to have a connection.</em></p>
+                    <p></p>
+                                            <pre><code class="language-php">const STATE_IDLE = 0;</code></pre>
+                                    </td>
+            </tr>
+                    <tr>
+                <td>STATE_READY</td>
+                <td class="last">
+                    <p><em>The Provider state, ready to get work done.</em></p>
+                    <p></p>
+                                            <pre><code class="language-php">const STATE_READY = 1;</code></pre>
+                                    </td>
+            </tr>
+            </table>
+
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_client">
+                                                                                <a href="../../../CharlotteDunois/Livia/Client.html"><abbr title="CharlotteDunois\Livia\Client">Client</abbr></a>
+                </td>
+                <td><a name="property_client" href="#property_client">$client</a></td>
+                <td class="last">The client this provider is for. This property is NOT accessible outside of the class and is only for documentation purpose here (for extending the class).</td>
+                <td><small>from&nbsp;<a href="../../../CharlotteDunois/Livia/Providers/SettingProvider.html#property_client"><abbr title="CharlotteDunois\Livia\Providers\SettingProvider">SettingProvider</abbr></a></small></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<abbr title="React\MySQL\ConnectionInterface">ConnectionInterface</abbr> $db)
+        
+                                            <p>Constructs a new instance.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_attachListeners">attachListeners</a>()
+        
+                                            <p>This method will attach all necessary event listeners to the client.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Livia/Providers/SettingProvider.html#method_attachListeners"><abbr title="CharlotteDunois\Livia\Providers\SettingProvider">SettingProvider</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_callbackCommandPrefixChange">callbackCommandPrefixChange</a>(<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr>|null $guild, string|null $prefix)
+        
+                                            <p>The callback for the command prefix change event.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Livia/Providers/SettingProvider.html#method_callbackCommandPrefixChange"><abbr title="CharlotteDunois\Livia\Providers\SettingProvider">SettingProvider</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_callbackCommandRegister">callbackCommandRegister</a>(<a href="../../../CharlotteDunois/Livia/Commands/Command.html"><abbr title="CharlotteDunois\Livia\Commands\Command">Command</abbr></a> $command)
+        
+                                            <p>The callback for the command register and reregister event.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Livia/Providers/SettingProvider.html#method_callbackCommandRegister"><abbr title="CharlotteDunois\Livia\Providers\SettingProvider">SettingProvider</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_callbackCommandStatusChange">callbackCommandStatusChange</a>(<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr>|null $guild, <a href="../../../CharlotteDunois/Livia/Commands/Command.html"><abbr title="CharlotteDunois\Livia\Commands\Command">Command</abbr></a> $command, bool $enabled)
+        
+                                            <p>The callback for the command status change event.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Livia/Providers/SettingProvider.html#method_callbackCommandStatusChange"><abbr title="CharlotteDunois\Livia\Providers\SettingProvider">SettingProvider</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_callbackGroupRegister">callbackGroupRegister</a>(<a href="../../../CharlotteDunois/Livia/Commands/CommandGroup.html"><abbr title="CharlotteDunois\Livia\Commands\CommandGroup">CommandGroup</abbr></a> $group)
+        
+                                            <p>The callback for the group register and reregister event.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Livia/Providers/SettingProvider.html#method_callbackGroupRegister"><abbr title="CharlotteDunois\Livia\Providers\SettingProvider">SettingProvider</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_callbackGroupStatusChange">callbackGroupStatusChange</a>(<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr>|null $guild, <a href="../../../CharlotteDunois/Livia/Commands/CommandGroup.html"><abbr title="CharlotteDunois\Livia\Commands\CommandGroup">CommandGroup</abbr></a> $group, bool $enabled)
+        
+                                            <p>The callback for the group status change event.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Livia/Providers/SettingProvider.html#method_callbackGroupStatusChange"><abbr title="CharlotteDunois\Livia\Providers\SettingProvider">SettingProvider</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_callbackGuildCreate">callbackGuildCreate</a>(<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr> $guild)
+        
+                                            <p>The callback for the guild create event.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Livia/Providers/SettingProvider.html#method_callbackGuildCreate"><abbr title="CharlotteDunois\Livia\Providers\SettingProvider">SettingProvider</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_clear">clear</a>(string|<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr> $guild)
+        
+                                            <p>Removes all settings in a guild.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_create">create</a>(string|<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr> $guild, array|<a href="https://secure.php.net/ArrayObject" target="_blank">ArrayObject</a> $settings = array())
+        
+                                            <p>Creates a new table row in the db for the guild, if it doesn't exist already - otherwise loads the row.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_destroy">destroy</a>()
+        
+                                            <p>Destroys the provider, removing any event listeners.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_get">get</a>(string|<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr> $guild, string $key, mixed $defaultValue = null)
+        
+                                            <p>Gets a setting from a guild.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="React\MySQL\ConnectionInterface">ConnectionInterface</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDB">getDB</a>()
+        
+                                            <p>Returns the MySQL connection.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getGuildID">getGuildID</a>(<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr>|string|int|null $guild)
+        
+                                            <p>Obtains the ID of the provided guild.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Livia/Providers/SettingProvider.html#method_getGuildID"><abbr title="CharlotteDunois\Livia\Providers\SettingProvider">SettingProvider</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getState">getState</a>()
+        
+                                            <p>Returns the provider state.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Livia/Providers/SettingProvider.html#method_getState"><abbr title="CharlotteDunois\Livia\Providers\SettingProvider">SettingProvider</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_init">init</a>(<a href="../../../CharlotteDunois/Livia/Client.html"><abbr title="CharlotteDunois\Livia\Client">Client</abbr></a> $client)
+        
+                                            <p>Initializes the provider by connecting to databases and/or caching all data in memory. Client::setProvider will automatically call this once the client is ready.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_remove">remove</a>(string|<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr> $guild, string $key)
+        
+                                            <p>Removes a setting from a guild.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_removeListeners">removeListeners</a>()
+        
+                                            <p>This method will remove the attached event listeners from the client.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Livia/Providers/SettingProvider.html#method_removeListeners"><abbr title="CharlotteDunois\Livia\Providers\SettingProvider">SettingProvider</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_runQuery">runQuery</a>(string $sql, array $parameters = array())
+        
+                                            <p>Runs a SQL query. Resolves with the QueryResult instance.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_set">set</a>(string|<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr> $guild, string $key, mixed $value)
+        
+                                            <p>Sets a setting for a guild.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setupGuild">setupGuild</a>(string|<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr> $guild)
+        
+                                            <p>Loads all settings for a guild. Used in listener callbacks.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Livia/Providers/SettingProvider.html#method_setupGuild"><abbr title="CharlotteDunois\Livia\Providers\SettingProvider">SettingProvider</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setupGuildCommand">setupGuildCommand</a>(string|<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr> $guild, <a href="../../../CharlotteDunois/Livia/Commands/Command.html"><abbr title="CharlotteDunois\Livia\Commands\Command">Command</abbr></a> $command, array|<a href="https://secure.php.net/ArrayObject" target="_blank">ArrayObject</a> $settings)
+        
+                                            <p>Sets up a command's status in a guild from the guild's settings. Used in listener callbacks.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Livia/Providers/SettingProvider.html#method_setupGuildCommand"><abbr title="CharlotteDunois\Livia\Providers\SettingProvider">SettingProvider</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setupGuildGroup">setupGuildGroup</a>(string|<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr> $guild, <a href="../../../CharlotteDunois/Livia/Commands/CommandGroup.html"><abbr title="CharlotteDunois\Livia\Commands\CommandGroup">CommandGroup</abbr></a> $group, array|<a href="https://secure.php.net/ArrayObject" target="_blank">ArrayObject</a> $settings)
+        
+                                            <p>Sets up a group's status in a guild from the guild's settings. Used in listener callbacks.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Livia/Providers/SettingProvider.html#method_setupGuildGroup"><abbr title="CharlotteDunois\Livia\Providers\SettingProvider">SettingProvider</abbr></a></small></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/v0.4.1/src/Providers/MySQLProvider.php#L32">line 32</a></div>
+        <code>                    
+    <strong>__construct</strong>(<abbr title="React\MySQL\ConnectionInterface">ConnectionInterface</abbr> $db)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Constructs a new instance.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="React\MySQL\ConnectionInterface">ConnectionInterface</abbr></td>
+                <td>$db</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_attachListeners">
+        <div class="location">in <a href="../../../CharlotteDunois/Livia/Providers/SettingProvider.html#method_attachListeners"><abbr title="CharlotteDunois\Livia\Providers\SettingProvider">SettingProvider</abbr></a> at         <a href="https://github.com/CharlotteDunois/Livia/blob/v0.4.1/src/Providers/SettingProvider.php#L142">line 142</a></div>
+        <code>                    void
+    <strong>attachListeners</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>This method will attach all necessary event listeners to the client.</p>                    <p>Providers extending this class must call this method when initializing the provider (in the <code>init</code> method).</p>                            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="https://secure.php.net/BadMethodCallException" target="_blank">BadMethodCallException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_callbackCommandPrefixChange">
+        <div class="location">in <a href="../../../CharlotteDunois/Livia/Providers/SettingProvider.html#method_callbackCommandPrefixChange"><abbr title="CharlotteDunois\Livia\Providers\SettingProvider">SettingProvider</abbr></a> at         <a href="https://github.com/CharlotteDunois/Livia/blob/v0.4.1/src/Providers/SettingProvider.php#L244">line 244</a></div>
+        <code>                    void
+    <strong>callbackCommandPrefixChange</strong>(<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr>|null $guild, string|null $prefix)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>The callback for the command prefix change event.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr>|null</td>
+                <td>$guild</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$prefix</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_callbackCommandRegister">
+        <div class="location">in <a href="../../../CharlotteDunois/Livia/Providers/SettingProvider.html#method_callbackCommandRegister"><abbr title="CharlotteDunois\Livia\Providers\SettingProvider">SettingProvider</abbr></a> at         <a href="https://github.com/CharlotteDunois/Livia/blob/v0.4.1/src/Providers/SettingProvider.php#L296">line 296</a></div>
+        <code>                    void
+    <strong>callbackCommandRegister</strong>(<a href="../../../CharlotteDunois/Livia/Commands/Command.html"><abbr title="CharlotteDunois\Livia\Commands\Command">Command</abbr></a> $command)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>The callback for the command register and reregister event.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../CharlotteDunois/Livia/Commands/Command.html"><abbr title="CharlotteDunois\Livia\Commands\Command">Command</abbr></a></td>
+                <td>$command</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_callbackCommandStatusChange">
+        <div class="location">in <a href="../../../CharlotteDunois/Livia/Providers/SettingProvider.html#method_callbackCommandStatusChange"><abbr title="CharlotteDunois\Livia\Providers\SettingProvider">SettingProvider</abbr></a> at         <a href="https://github.com/CharlotteDunois/Livia/blob/v0.4.1/src/Providers/SettingProvider.php#L259">line 259</a></div>
+        <code>                    void
+    <strong>callbackCommandStatusChange</strong>(<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr>|null $guild, <a href="../../../CharlotteDunois/Livia/Commands/Command.html"><abbr title="CharlotteDunois\Livia\Commands\Command">Command</abbr></a> $command, bool $enabled)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>The callback for the command status change event.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr>|null</td>
+                <td>$guild</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../CharlotteDunois/Livia/Commands/Command.html"><abbr title="CharlotteDunois\Livia\Commands\Command">Command</abbr></a></td>
+                <td>$command</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$enabled</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_callbackGroupRegister">
+        <div class="location">in <a href="../../../CharlotteDunois/Livia/Providers/SettingProvider.html#method_callbackGroupRegister"><abbr title="CharlotteDunois\Livia\Providers\SettingProvider">SettingProvider</abbr></a> at         <a href="https://github.com/CharlotteDunois/Livia/blob/v0.4.1/src/Providers/SettingProvider.php#L311">line 311</a></div>
+        <code>                    void
+    <strong>callbackGroupRegister</strong>(<a href="../../../CharlotteDunois/Livia/Commands/CommandGroup.html"><abbr title="CharlotteDunois\Livia\Commands\CommandGroup">CommandGroup</abbr></a> $group)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>The callback for the group register and reregister event.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../CharlotteDunois/Livia/Commands/CommandGroup.html"><abbr title="CharlotteDunois\Livia\Commands\CommandGroup">CommandGroup</abbr></a></td>
+                <td>$group</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_callbackGroupStatusChange">
+        <div class="location">in <a href="../../../CharlotteDunois/Livia/Providers/SettingProvider.html#method_callbackGroupStatusChange"><abbr title="CharlotteDunois\Livia\Providers\SettingProvider">SettingProvider</abbr></a> at         <a href="https://github.com/CharlotteDunois/Livia/blob/v0.4.1/src/Providers/SettingProvider.php#L274">line 274</a></div>
+        <code>                    void
+    <strong>callbackGroupStatusChange</strong>(<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr>|null $guild, <a href="../../../CharlotteDunois/Livia/Commands/CommandGroup.html"><abbr title="CharlotteDunois\Livia\Commands\CommandGroup">CommandGroup</abbr></a> $group, bool $enabled)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>The callback for the group status change event.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr>|null</td>
+                <td>$guild</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../CharlotteDunois/Livia/Commands/CommandGroup.html"><abbr title="CharlotteDunois\Livia\Commands\CommandGroup">CommandGroup</abbr></a></td>
+                <td>$group</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$enabled</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_callbackGuildCreate">
+        <div class="location">in <a href="../../../CharlotteDunois/Livia/Providers/SettingProvider.html#method_callbackGuildCreate"><abbr title="CharlotteDunois\Livia\Providers\SettingProvider">SettingProvider</abbr></a> at         <a href="https://github.com/CharlotteDunois/Livia/blob/v0.4.1/src/Providers/SettingProvider.php#L287">line 287</a></div>
+        <code>                    void
+    <strong>callbackGuildCreate</strong>(<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr> $guild)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>The callback for the guild create event.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr></td>
+                <td>$guild</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_clear">
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/v0.4.1/src/Providers/MySQLProvider.php#L185">line 185</a></div>
+        <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
+    <strong>clear</strong>(string|<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr> $guild)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Removes all settings in a guild.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr></td>
+                <td>$guild</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="https://secure.php.net/InvalidArgumentException" target="_blank">InvalidArgumentException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_create">
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/v0.4.1/src/Providers/MySQLProvider.php#L100">line 100</a></div>
+        <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
+    <strong>create</strong>(string|<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr> $guild, array|<a href="https://secure.php.net/ArrayObject" target="_blank">ArrayObject</a> $settings = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Creates a new table row in the db for the guild, if it doesn't exist already - otherwise loads the row.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr></td>
+                <td>$guild</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array|<a href="https://secure.php.net/ArrayObject" target="_blank">ArrayObject</a></td>
+                <td>$settings</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="https://secure.php.net/InvalidArgumentException" target="_blank">InvalidArgumentException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_destroy">
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/v0.4.1/src/Providers/MySQLProvider.php#L60">line 60</a></div>
+        <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
+    <strong>destroy</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Destroys the provider, removing any event listeners.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_get">
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/v0.4.1/src/Providers/MySQLProvider.php#L117">line 117</a></div>
+        <code>                    mixed
+    <strong>get</strong>(string|<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr> $guild, string $key, mixed $defaultValue = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets a setting from a guild.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr></td>
+                <td>$guild</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$defaultValue</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="https://secure.php.net/BadMethodCallException" target="_blank">BadMethodCallException</a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="https://secure.php.net/InvalidArgumentException" target="_blank">InvalidArgumentException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDB">
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/v0.4.1/src/Providers/MySQLProvider.php#L52">line 52</a></div>
+        <code>                    <abbr title="React\MySQL\ConnectionInterface">ConnectionInterface</abbr>
+    <strong>getDB</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the MySQL connection.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="React\MySQL\ConnectionInterface">ConnectionInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getGuildID">
+        <div class="location">in <a href="../../../CharlotteDunois/Livia/Providers/SettingProvider.html#method_getGuildID"><abbr title="CharlotteDunois\Livia\Providers\SettingProvider">SettingProvider</abbr></a> at         <a href="https://github.com/CharlotteDunois/Livia/blob/v0.4.1/src/Providers/SettingProvider.php#L128">line 128</a></div>
+        <code>                    string
+    <strong>getGuildID</strong>(<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr>|string|int|null $guild)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Obtains the ID of the provided guild.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr>|string|int|null</td>
+                <td>$guild</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="https://secure.php.net/InvalidArgumentException" target="_blank">InvalidArgumentException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getState">
+        <div class="location">in <a href="../../../CharlotteDunois/Livia/Providers/SettingProvider.html#method_getState"><abbr title="CharlotteDunois\Livia\Providers\SettingProvider">SettingProvider</abbr></a> at         <a href="https://github.com/CharlotteDunois/Livia/blob/v0.4.1/src/Providers/SettingProvider.php#L56">line 56</a></div>
+        <code>                    int
+    <strong>getState</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the provider state.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_init">
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/v0.4.1/src/Providers/MySQLProvider.php#L70">line 70</a></div>
+        <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
+    <strong>init</strong>(<a href="../../../CharlotteDunois/Livia/Client.html"><abbr title="CharlotteDunois\Livia\Client">Client</abbr></a> $client)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Initializes the provider by connecting to databases and/or caching all data in memory. Client::setProvider will automatically call this once the client is ready.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../CharlotteDunois/Livia/Client.html"><abbr title="CharlotteDunois\Livia\Client">Client</abbr></a></td>
+                <td>$client</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_remove">
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/v0.4.1/src/Providers/MySQLProvider.php#L161">line 161</a></div>
+        <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
+    <strong>remove</strong>(string|<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr> $guild, string $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Removes a setting from a guild.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr></td>
+                <td>$guild</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="https://secure.php.net/BadMethodCallException" target="_blank">BadMethodCallException</a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="https://secure.php.net/InvalidArgumentException" target="_blank">InvalidArgumentException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeListeners">
+        <div class="location">in <a href="../../../CharlotteDunois/Livia/Providers/SettingProvider.html#method_removeListeners"><abbr title="CharlotteDunois\Livia\Providers\SettingProvider">SettingProvider</abbr></a> at         <a href="https://github.com/CharlotteDunois/Livia/blob/v0.4.1/src/Providers/SettingProvider.php#L162">line 162</a></div>
+        <code>                    void
+    <strong>removeListeners</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>This method will remove the attached event listeners from the client.</p>                    <p>Providers extending this class must call this method when destroying the provider (in the <code>destroy</code> method).</p>                            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_runQuery">
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/v0.4.1/src/Providers/MySQLProvider.php#L201">line 201</a></div>
+        <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
+    <strong>runQuery</strong>(string $sql, array $parameters = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Runs a SQL query. Resolves with the QueryResult instance.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$sql</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td>Parameters for the query - these get escaped</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="https://github.com/friends-of-reactphp/mysql/blob/master/src/QueryResult.php" target="_blank">https://github.com/friends-of-reactphp/mysql/blob/master/src/QueryResult.php</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_set">
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Livia/blob/v0.4.1/src/Providers/MySQLProvider.php#L139">line 139</a></div>
+        <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
+    <strong>set</strong>(string|<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr> $guild, string $key, mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets a setting for a guild.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr></td>
+                <td>$guild</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="https://secure.php.net/BadMethodCallException" target="_blank">BadMethodCallException</a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="https://secure.php.net/InvalidArgumentException" target="_blank">InvalidArgumentException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setupGuild">
+        <div class="location">in <a href="../../../CharlotteDunois/Livia/Providers/SettingProvider.html#method_setupGuild"><abbr title="CharlotteDunois\Livia\Providers\SettingProvider">SettingProvider</abbr></a> at         <a href="https://github.com/CharlotteDunois/Livia/blob/v0.4.1/src/Providers/SettingProvider.php#L182">line 182</a></div>
+        <code>                    void
+    <strong>setupGuild</strong>(string|<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr> $guild)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Loads all settings for a guild. Used in listener callbacks.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr></td>
+                <td>$guild</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setupGuildCommand">
+        <div class="location">in <a href="../../../CharlotteDunois/Livia/Providers/SettingProvider.html#method_setupGuildCommand"><abbr title="CharlotteDunois\Livia\Providers\SettingProvider">SettingProvider</abbr></a> at         <a href="https://github.com/CharlotteDunois/Livia/blob/v0.4.1/src/Providers/SettingProvider.php#L215">line 215</a></div>
+        <code>                    void
+    <strong>setupGuildCommand</strong>(string|<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr> $guild, <a href="../../../CharlotteDunois/Livia/Commands/Command.html"><abbr title="CharlotteDunois\Livia\Commands\Command">Command</abbr></a> $command, array|<a href="https://secure.php.net/ArrayObject" target="_blank">ArrayObject</a> $settings)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets up a command's status in a guild from the guild's settings. Used in listener callbacks.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr></td>
+                <td>$guild</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../CharlotteDunois/Livia/Commands/Command.html"><abbr title="CharlotteDunois\Livia\Commands\Command">Command</abbr></a></td>
+                <td>$command</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array|<a href="https://secure.php.net/ArrayObject" target="_blank">ArrayObject</a></td>
+                <td>$settings</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setupGuildGroup">
+        <div class="location">in <a href="../../../CharlotteDunois/Livia/Providers/SettingProvider.html#method_setupGuildGroup"><abbr title="CharlotteDunois\Livia\Providers\SettingProvider">SettingProvider</abbr></a> at         <a href="https://github.com/CharlotteDunois/Livia/blob/v0.4.1/src/Providers/SettingProvider.php#L230">line 230</a></div>
+        <code>                    void
+    <strong>setupGuildGroup</strong>(string|<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr> $guild, <a href="../../../CharlotteDunois/Livia/Commands/CommandGroup.html"><abbr title="CharlotteDunois\Livia\Commands\CommandGroup">CommandGroup</abbr></a> $group, array|<a href="https://secure.php.net/ArrayObject" target="_blank">ArrayObject</a> $settings)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets up a group's status in a guild from the guild's settings. Used in listener callbacks.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|<abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr></td>
+                <td>$guild</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../CharlotteDunois/Livia/Commands/CommandGroup.html"><abbr title="CharlotteDunois\Livia\Commands\CommandGroup">CommandGroup</abbr></a></td>
+                <td>$group</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array|<a href="https://secure.php.net/ArrayObject" target="_blank">ArrayObject</a></td>
+                <td>$settings</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>
